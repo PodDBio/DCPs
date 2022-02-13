@@ -1,0 +1,32 @@
+<pre>
+  DCP: <to be assigned>
+  Title: <DCP title>
+  Author: <list of authors' names and optionally, email addresses>
+  Type: <Standard | Informational | Meta>
+  Status: Draft
+  Created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+  Requires (*optional): <DCP number(s)>
+  Replaces (*optional): <DCP number(s)>
+</pre>
+
+==Abstract==
+
+A short (~200 words) description of the data collaboration issue being addressed.
+
+==Motivation==
+
+The motivation is critical for DCPs that want community to understand what it is. It should clearly explain why the existing data collaboration protocol specification is inadequate to address the problem that the DCP solves. DCP submissions without sufficient motivation may be rejected outright.
+
+==Specification==
+
+The data collaboration protocol specification should describe the data structure and collaboration ways of any new feature. 
+
+==Rationale==
+
+The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages.
+
+The rationale may also provide evidence of consensus within the community and should discuss important objections or concerns raised during discussion.
+
+==Test Cases==
+
+Test cases for an implementation are mandatory for DCPs that are affecting consensus changes. Other DCPs can choose to include links to test cases if applicable.

@@ -1,0 +1,32 @@
+==Data Collaboration Protocols(DCPs)==
+
+A DCP(Data Collaboration Protocol) is a descriptive specification document for a data collaboration scheme that defines the ways in which participants can collaborate on the same data definitions, processes, and toolchains.
+
+==Contributing==
+
+First review [[DCPS/DCP-0.mediawiki|DCP-0]]. Then clone the repository and add your DCP to it. There is a [[DCP-X.mediawiki|template DCP here]]. Then submit a [https://github.com/poddbio/DCPs/pulls Pull Request] to this repository.
+
+==Table of Contents==
+
+{| class="wikitable sortable" style="width: auto; text-align: center; font-size: smaller; table-layout: fixed;"
+!<nowiki>#</nowiki>
+!Title
+!Author
+!Type
+!Status
+!Ref.
+|-
+| [[DCPS/DCP-0.mediawiki|0]]
+| DCP Purpose and Guidelines
+| POD Team
+| Reserved
+| Active
+| -
+|-
+| 1
+| 
+|
+| 
+| 
+| 
+|}

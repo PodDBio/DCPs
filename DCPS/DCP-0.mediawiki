@@ -1,0 +1,152 @@
+<pre>
+  DCP: 0
+  Title: DCP Purpose and Guidelines
+  Author: POD Team
+  Type: Meta
+  Status: Active
+  Created: 2021-2-14
+</pre>
+
+==What is a DCP?==
+
+Data Collaboration Protocols (DCPs) are standards specifying potential new collaboration features or processes for Web3 data. The DCP should provide a concise descriptions of data structure and utilization methods. The DCP author is responsible for building consensus within the community and documenting dissenting opinions.
+
+==DCP Rational==
+
+We hope DCPs to be the primary mechanisms for proposing new data collaboration method when have need in web3 data collaboration, anyone can submit their own data collaboration protocol on DCP. The difference between DCP and EIP is that 
+* 1. EIP focuses on the realization of the underlying technology , while DCP solves business and data collaboration need.
+* 2. EIP has only the description and protocol of the interface, while DCP is a general solution composed of a series of tool chains in order to solve a certain business goal.
+* 3. EIP is a top-down approval mechanism, but DCP is a bottom-up open platform, DCP editors only helps DCP owners to better express themselves to the community. Through the DCP documentation, the community can gain a better understanding of the protocol's motivations, engagement methods, and collaboration.
+Through an open DCP, where interested parties can collaborate by the same data structure and adoption method, collecting community input on an issue to help create greater data consensus across the network.
+
+==DCP Workflow==
+
+The DCP process begins with a new idea of data collaboration method in web3. It is highly recommended that a single DCP contain a single key proposal or new idea. The more focused the DCP, the more successful it tends to be. 
+
+Each DCP must have a champion - someone who writes the DCP using the style and format described below, shepherds the discussions in the appropriate forums, and attempts to build community consensus around the idea.
+
+Draft DCP should be presented as a pull request. This gives the author a chance to continuously edit the draft DCP for proper formatting and quality. This also allows for further public comment and the author of the DCP to address concerns about the proposal.
+
+If the DCP collaborators approve, the DCP editor will assign the DCP a number. The DCP editor will not unreasonably deny a DCP. Reasons for denying DCP status include duplication of effort, being technically unsound, not providing proper motivation or addressing backwards compatibility.
+
+Standards Track DCPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification. The DCP should be reviewed and accepted along with the implementation. Furthermore, an ACCEPTED status of Standard DCP shall also be verified by real project. Standards Track DCPs must include an implementation -- in the form of code, a patch, or a URL to same -- before it can be considered Final.
+
+For a DCP to be accepted it must meet certain minimum criteria. It must be a clear and complete description of the proposed collaboration method. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
+
+A DCP can also be assigned status "Deferred". The DCP author or editor can assign the DCP this status when no progress is being made on the DCP. Once a DCP is deferred, the DCP editor can re-assign it to draft status.
+
+A DCP can also be "Rejected". Perhaps after all is said and done it was not a good idea. It is still important to have a record of this fact.
+
+DCPs can also be superseded(replaced) by a different DCP, rendering the original obsolete.
+
+The possible paths of the status of DCPs are as follows:
+
+[[Image:/resource/DCP-0/process.png|DCP Process]]
+
+
+==What belongs in a successful DCP?==
+
+Each DCP should have the following parts:
+
+*Preamble -- [https://tools.ietf.org/html/rfc822 RFC 822] style headers containing meta-data about the DCP, including the DCP number, a short descriptive title (limited to a maximum of 44 characters), the names, and optionally the contact info for each author, etc.
+
+*Abstract -- a short (~200 words) description of the data issue being addressed.
+
+*Motivation (*optional) -- The motivation is critical for DCPs that want community to understand what it is. It should clearly explain why the existing data collaboration protocol specification is inadequate to address the problem that the DCP solves. DCP submissions without sufficient motivation may be rejected outright.
+
+*Specification -- The data collaboration protocol specification should describe the data structure and collaboration ways of any new feature. 
+
+*Test Cases -- Test cases for an implementation are mandatory for DCPs that are affecting consensus changes. Other DCPs can choose to include links to test cases if applicable.
+
+==DCP Formats and Templates==
+
+DCPs should be written in [https://www.mediawiki.org/wiki/Help:Contents mediawiki] or [https://help.github.com/articles/basic-writing-and-formatting-syntax/ markdown] format. Image files should be included in a subdirectory of resource, with a folder of DCP-x.
+
+===DCP Header Preamble===
+
+Each DCP must begin with an [https://tools.ietf.org/html/rfc822 RFC 822] style header preamble. The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
+
+<pre>
+  DCP: <DCP number>(this is determined by the DCP editor, reuse issue id in most cases)
+  Title: <DCP title>
+  Author: <list of authors' real names and optionally, email address>
+ *Discussions-To: <email address>
+  Status: <Draft | Active | Accepted | Deferred | Rejected | Withdrawn | Replaced>
+  Type: <Standard | Informational | Meta>
+  Created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+ *Replaces: <DCP numbers>
+ *Superseded-By: <DCP number>
+ *Resolution: <url>
+</pre>
+
+The Author header lists the names, and optionally the email addresses of all the authors/owners of the DCP. The format of the Author header value must be
+
+<pre>
+  Random J. User <address@dom.ain>
+</pre>
+
+if the email address is included, and just
+
+<pre>
+  Random J. User
+</pre>
+
+if the email address is not given.
+
+If there are multiple authors, each should be on a separate line following RFC 2822 continuation line conventions.
+
+Note: The Resolution header is required for Standards Track DCPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the DCP is made.
+
+While a DCP is in private discussions (usually during the initial Draft phase), a Discussions-To header will indicate the mailing list or URL where the DCP is being discussed. No Discussions-To header is necessary if the DCP is being discussed privately with the author.
+
+The Type header specifies the type of DCP: Standard, Informational, or Meta.
+
+The Created header records the date that the DCP was assigned a number. It should be in yyyy-mm-dd format, e.g. 2001-08-14.
+
+DCPs may have a Requires header, indicating the DCP numbers that this DCP depends on.
+
+DCPs may also have a Superseded-By header indicating that a DCP has been rendered obsolete by a later document; the value is the number of the DCP that replaces the current document. The newer DCP must have a Replaces header containing the number of the DCP that it rendered obsolete.
+
+===Auxiliary Files===
+
+DCPs may include auxiliary files such as diagrams. Such files must be included in a subdirectory for /resource/DCP-x, where "x" is the DCP number.
+
+==Transferring DCP Ownership==
+
+It occasionally becomes necessary to transfer ownership of DCPs to a new champion. In general, we'd like to retain the original author as a co-author of the transferred DCP, but that's really up to the original author. A good reason to transfer ownership is because the original author no longer has the time or interest in updating it or following through with the DCP process, or has fallen off the face of the 'net (i.e. is unreachable or not responding to email). A bad reason to transfer ownership is because you don't agree with the direction of the DCP. We try to build consensus around a DCP, but if that's not possible, you can always submit a competing DCP.
+
+If you are interested in assuming ownership of a DCP, send a message asking to take over, addressed to both the original author and the DCP editor. If the original author doesn't respond to email in a timely manner, the DCP editor will make a unilateral decision (it's not like such decisions can't be reversed :).
+
+==DCP Editors==
+
+The current DCP editors are
+
+*Vista Williams(@vistahw)
+
+==DCP Editor Responsibilities & Workflow==
+
+For each new DCP that comes in, an editor does the following:
+
+*Read the DCP to check if it is ready: sound and complete. The ideas must make technical sense, even if they don't seem likely to be accepted.
+
+*The title should accurately describe the content.
+
+*Edit the DCP for language (spelling, grammar, sentence structure, etc.), markup (GitHub flavored Markdown), code style
+
+If the DCP isn't ready, the editor will send it back to the author for revision, with specific instructions.
+
+Once the DCP is ready for the repository, the DCP editor will:
+
+*Assign a DCP number (almost always just the next available number, but sometimes it's a special/joke number, like 666 or 3141) in the pull request comments.
+
+*Merge the pull request when the author is ready (allowing some time for further peer review).
+
+*List the DCP in [https://github.com/PodDBio/DCPs/blob/main/README.mediawiki README.mediawiki]
+
+*Send a message back to the DCP author with next steps.
+
+The DCP editors are intended to fulfill administrative and editorial responsibilities. The DCP editors monitor DCP changes, and correct any structure, grammar, spelling, or markup mistakes we see.
+
+==History==
+
+This document was derived heavily from [https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [https://www.python.org/dev/peps/pep-0001/ Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the POD improvement process and should not be bothered with technical questions specific to POD or the DCP process. Please direct all comments to the DCP editors.
